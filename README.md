@@ -1,6 +1,6 @@
 # Learning Concurrency in Java
 
-This project demonstrates how to use Java's ExecutorService and Future to calculate the number of prime numbers up to a certain number in a concurrent way. We distribute the tasks to an ExecutorService that manages a fixed thread pool, and retrieve results asynchronously using Future objects.
+This project demonstrates how to use Java's ExecutorService and Future to calculate the number of prime and Fibonacci numbers up to a certain number in a concurrent way. We distribute the tasks to an ExecutorService that manages a fixed thread pool, and retrieve results asynchronously using Future objects.
 
 # Implementation
 
@@ -11,6 +11,11 @@ The implementation revolves around the PrimeCalculator class and the Main class.
 'PrimeCalculator' implements the 'Callable \<Integer\>' interface. It is designed to calculate the number of prime numbers up to a certain number specified at the creation of the 'PrimeCalculator' object.
 
 When an 'ExecutorService' executes a 'PrimeCalculator' task, it will count the number of prime numbers up to the specified number and return the result as an 'Integer'.
+
+## FibonacciCalculator
+
+FibonacciCalculator class that calculates the Fibonacci sequence up to a given number. This class also implements Callable, but this time it returns a List\<Integer\> as its result.
+
 
 ## Main
 
